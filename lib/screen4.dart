@@ -28,45 +28,47 @@ class _Screen4State extends State<Screen4> {
         title: Text('NAVTTC Monitoring'),
         backgroundColor: Colors.black,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Text(
-              'TRADE LIST',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: 10),
-            ...buttons.map((text) => Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 5.0),
-                  child: MenuButton(
-                    text: text,
-                    isSelected: selectedButton == text,
-                    onPressed: () {
-                      setState(() {
-                        selectedButton = text;
-                      });
-                    },
-                  ),
-                )),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('SAVE', style: TextStyle(color: Colors.white)),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.black,
-                padding: EdgeInsets.symmetric(vertical: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Text(
+                'TRADE LIST',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
-            ),
-          ],
+              SizedBox(height: 10),
+              ...buttons.map((text) => Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5.0),
+                    child: MenuButton(
+                      text: text,
+                      isSelected: selectedButton == text,
+                      onPressed: () {
+                        setState(() {
+                          selectedButton = text;
+                        });
+                      },
+                    ),
+                  )),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Text('SAVE', style: TextStyle(color: Colors.white)),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.black,
+                  padding: EdgeInsets.symmetric(vertical: 16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

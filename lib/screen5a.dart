@@ -72,6 +72,7 @@ class _InstituteIdPageState extends State<InstituteIdPage> {
       padding: const EdgeInsets.symmetric(vertical: 5.0),
       child: TextField(
         controller: controller,
+        keyboardType: TextInputType.number, // Set the keyboard type to number
         decoration: InputDecoration(
           prefixIcon: Icon(icon),
           hintText: hintText,

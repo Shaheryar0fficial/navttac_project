@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navttac2/mon_stat_1.dart';
 import 'package:navttac2/screen3.dart';
 
 class MonitoringScreen extends StatelessWidget {
@@ -25,6 +26,7 @@ class MonitoringScreen extends StatelessWidget {
                 MonitoringItem(
                   icon: Icons.pie_chart,
                   label: 'Monitoring Status',
+                  targetScreen: monitored_institutes(),
                 ),
               ],
             ),

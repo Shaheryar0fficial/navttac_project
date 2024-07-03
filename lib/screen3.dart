@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:navttac2/screen10.dart';
 import 'package:navttac2/screen4.dart';
 import 'package:navttac2/screen5a.dart';
 import 'package:navttac2/screen6.dart';
+import 'package:navttac2/screen8.dart';
+import 'package:navttac2/screen9.dart';
 
 class Screen2 extends StatefulWidget {
   const Screen2({super.key});
@@ -57,6 +60,10 @@ class _Screen2State extends State<Screen2> {
               text: 'Allied/Other Facilities',
               isSelected: selectedButton == 'Allied/Other Facilities',
               onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Allied_Facilities()));
                 setState(() {
                   selectedButton = 'Allied/Other Facilities';
                 });
@@ -82,6 +89,11 @@ class _Screen2State extends State<Screen2> {
               text: 'Overall Experience',
               isSelected: selectedButton == 'Overall Experience',
               onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => overall_experience(),
+                    ));
                 setState(() {
                   selectedButton = 'Overall Experience';
                 });
@@ -92,6 +104,11 @@ class _Screen2State extends State<Screen2> {
               text: 'Add/Edit Details',
               isSelected: selectedButton == 'Add/Edit Details',
               onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Add_Edit(),
+                    ));
                 setState(() {
                   selectedButton = 'Add/Edit Details';
                 });

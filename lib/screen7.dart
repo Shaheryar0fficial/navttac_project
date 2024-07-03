@@ -56,7 +56,7 @@ class _PartnerInstitueProfile2State extends State<PartnerInstitueProfile2> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Partner Institute\'s Profile 1/2',
+                    'Partner Institute\'s Profile 2/2',
                     style: TextStyle(fontSize: fontSize),
                   ),
                   SizedBox(height: height * 0.02),
